@@ -1,0 +1,33 @@
+data:
+  his_size: 20
+  vert_num: 461
+  data_format: naml
+  npratio: 3
+  article_emb_size: 250
+  total_train: 172192
+  total_test: 215224
+
+info:
+  metrics:
+  - mrr@3;5;10;20
+  - ndcg@3;5;10;20
+  - hit@3;5;10;20
+  show_step: 100000
+
+model:
+  attention_hidden_dim: 200
+  vert_emb_dim: 100
+
+  dropout: 0.2
+  filter_num: 250
+  window_size: 3
+  cnn_activation: relu
+  model_type: naml
+  dense_activation: relu
+
+train:
+  batch_size: 8
+  epochs: 50
+  learning_rate: 0.0001
+  loss: cross_entropy_loss
+  optimizer: adam

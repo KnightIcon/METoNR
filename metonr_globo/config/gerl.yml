@@ -1,0 +1,31 @@
+data:
+  his_size: 20
+  npratio: 3
+  article_emb_size: 250
+  neighbor_size: 4
+  neighbor_kind: 3
+  total_train: 172192
+  total_test: 215224
+  user_num: 87000
+  user_id_dim: 16
+
+info:
+  metrics:
+  - mrr@3;5;10;20
+  - ndcg@3;5;10;20
+  - hit@3;5;10;20
+  show_step: 100000
+
+model:
+  model_type: gerl
+  dense_activation: relu
+  head_num: 4
+  head_dim: 64
+  dense_dim: 128
+
+train:
+  batch_size: 8
+  epochs: 50
+  learning_rate: 0.0001
+  loss: cross_entropy_loss
+  optimizer: adam
