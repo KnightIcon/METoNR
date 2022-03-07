@@ -15,4 +15,5 @@
 $ python main.py
 ```
 ### Dataset
-* Due to github restrictions, I put the dataset in the link below
+1. addressa dataset http://reclab.idi.ntnu.no/dataset
+2. globo dataset https://www.kaggle.com/gspmoreira/news-portal-user-interactions-by-globocom
